@@ -4,7 +4,7 @@
 	flex-direction: column;
 	align-items: center;
 	min-height: 30rem;
-	min-width: 23rem;
+	width: 23rem;
 }
 
 .cardContainer input {
@@ -19,12 +19,13 @@
 	background: none;
 	font-size: 1.5rem;
 	margin: 1rem;
-	background-color: rgba(2, 2, 2, 0.5);
+	background-color: #FFFFFF4F;
 	border-radius: 1rem;
 }
 
 .teamName
 {
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -36,6 +37,11 @@
 	color: white;
 	margin: 1rem;
 }
+
+.cardContainer input::placeholder {
+	color: white;
+}
+
 
 .underContainer {
 	display: flex;
@@ -61,13 +67,32 @@
 	align-items: center;
 	justify-content: center;
 	margin: 0.5rem;
-	/* background: linear-gradient(276.23deg, #FC5943 3.13%, #62008A 100%); */
 	border: 3px solid #FC5943AA;
 	border-radius: 0.5rem;
 	font-size: 1.7rem;
 	max-width: 12rem;
-
+	background: #FC5943AA;
 	width: 80%;
 	padding: 0.3rem 1rem;
-	color: white;
+}
+
+.btn {
+	background: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.5rem;
+	padding: 0.3rem 1rem;
+	font-size: 1.7rem;
+	outline: none;
+	border: 3px solid #FC5943AA;
+	margin: 0.5rem;
+	/* background: linear-gradient(170deg, #FC5943 3.13%, #62008A 100%); */
+	background: #62008A66;
+	max-width: 12rem;
+	width: 80%;
+}
+
+.btn:hover {
+	cursor: pointer;
 }

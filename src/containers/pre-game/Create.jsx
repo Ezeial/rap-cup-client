@@ -19,6 +19,10 @@ const Create = () => {
 		socket.on("room:join:sucess", (roomID) => {
 			navigate(`../room/${roomID}`)
 		})
+
+		return () => {
+			socket.off("room:join:sucess")
+		}
 	}, [socket])
 
 	const createGame = async () => {
