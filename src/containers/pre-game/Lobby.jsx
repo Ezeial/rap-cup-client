@@ -3,6 +3,7 @@ import { useUserStore } from "../../contexts/User"
 import Background from "../../pure-components/Background/Background"
 import Footer from "../../pure-components/Footer/Footer"
 import Title from "../../pure-components/Title/Title"
+import { Label, WaitingContainer } from "../../pure-components/Lobby/Lobby"
 import { LobbyCard } from "../../pure-components/Lobby/Lobby"
 import { useOutletContext, useParams } from "react-router-dom"
 import { useEffect } from "react"
@@ -31,6 +32,13 @@ const Lobby = () => {
 
 	return <Background>
 		<Title>RAP CUP</Title>
+		<WaitingContainer>
+		{	
+			room && room.players.filter(p => p.teamNumber === -1).map(p => {
+				return <Label>{p.username}</Label>
+			})
+		}
+		</WaitingContainer>
 		<div style={{ display: 'flex', justifyContent: 'space-around', width: '100%', flexWrap: 'wrap'}}>
 			{
 				room && room.teams.map(team => {

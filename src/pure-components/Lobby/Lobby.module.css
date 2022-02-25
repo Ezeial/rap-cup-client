@@ -96,3 +96,10 @@
 .btn:hover {
 	cursor: pointer;
 }
+
+.waitingContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}

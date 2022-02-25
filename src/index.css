@@ -7,8 +7,16 @@
 
 *
 {
-  font-family: Nunito;
+	font-size: 100%;
+	font-family: Nunito;
 }
+
+@media (max-width: 1550px) {
+	* {
+		font-size: 80%;
+	}
+}
+
 
 body {
   margin: 0;
